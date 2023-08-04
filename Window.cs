@@ -91,7 +91,7 @@ public static class Window
 		LayerShell.InitWindow(window);
 		LayerShell.SetLayer(window, LayerShell.Layer.Overlay);
 		LayerShell.SetKeyboardInteractivity(window, true);
-		LayerShell.SetKeyboardMode(window, LayerShell.KeyboardMode.None);
+		LayerShell.SetKeyboardMode(window, LayerShell.KeyboardMode.Exclusive);
 		LayerShell.SetMargin(window, LayerShell.Edge.Top, Config.WindowMarginTop);
 		LayerShell.SetMargin(window, LayerShell.Edge.Right, Config.WindowMarginRight);
 		LayerShell.SetMargin(window, LayerShell.Edge.Bottom, Config.WindowMarginBottom);
@@ -101,6 +101,7 @@ public static class Window
 		window.Resizable = false;
 		window.KeepAbove = true;
 		window.FocusOutEvent += (object sender, FocusOutEventArgs e) => Application.Quit();
+		window.ButtonPressEvent += (object sender, ButtonPressEventArgs e) => Application.Quit();
 		window.SetDefaultSize(Config.WindowWidth, Config.WindowHeight);
 		window.ShowAll();
 
