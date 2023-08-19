@@ -70,7 +70,8 @@ public static class Window
 		box_controlls.PackStart(mute, false, false, 0);
 		box_controlls.PackStart(slider, true, true, 0);
 
-		dropdown.Changed += (object sender, EventArgs e) => Console.WriteLine(dropdown.ActiveText);
+		/// <TODO>Set default sink.</TODO>
+		// dropdown.Changed += (object sender, EventArgs e) => Console.WriteLine(dropdown.ActiveText);
 
 		mute.WidthRequest = 10;
 		mute.HeightRequest = 10;

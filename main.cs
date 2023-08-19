@@ -54,7 +54,7 @@ public static class Program
 
 	private static int Main(string[] args) 
 	{
-		if (args.Length == 0 || (args.Length == 1 && (args[0] == "-h" || args[0] == "--help" || args[0] == "help")))
+		if (args.Length == 0 || (args.Length == 1 && (args[0] == "-h" || args[0] == "--help" || args[0] == "help"))) 
 		{
 			Console.WriteLine("Usage:\n\tsound-menu <command> [options]");
 			Console.WriteLine("\nCommands:");
@@ -66,8 +66,8 @@ public static class Program
 		}
 
 		Config.Initialize(ref args);
-		if (args.Length == 0) { Console.WriteLine("No commands provided."); return 1; }
 
+		if (args.Length == 0) { Console.WriteLine("No commands provided."); return 1; }
 		switch (args[0]) 
 		{
 			case "window":
